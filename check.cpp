@@ -46,7 +46,7 @@ void Checker::check_insert() {
         end = steady_clock::now();
 
         time = duration_cast<nanoseconds>(end - start);
-        fout << time.count() << std::endl;                   
+        fout << i * step << ' ' << time.count() << std::endl;                   
     }
     fout.close();
 }
@@ -67,7 +67,7 @@ void Checker::check_find() {
         end = steady_clock::now();
 
         time = duration_cast<nanoseconds>(end - start);
-        fout << time.count() << std::endl;                   
+        fout << i * step << ' ' << time.count() << std::endl;                   
     }
     fout.close();
 }
@@ -88,7 +88,7 @@ void Checker::check_remove() {
         end = steady_clock::now();
 
         time = duration_cast<nanoseconds>(end - start);
-        fout << time.count() << std::endl;                   
+        fout << i * step << ' ' << time.count() << std::endl;                   
     }
     fout.close();
 }
